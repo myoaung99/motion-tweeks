@@ -5,6 +5,13 @@ export type Game = {
   image: string;
 };
 
+export type VikingGame = {
+  title: string;
+  description: string;
+  longDescription: string[];
+  image: string;
+};
+
 export const GAMES: Game[] = [
   {
     title: "The Oddysey",
@@ -48,3 +55,14 @@ export const GAMES: Game[] = [
       "https://animations-on-the-web-git-how-i-use-3066e1-emilkowalski-s-team.vercel.app/how-i-use-framer-motion/how-i-code-animations/boy.webp",
   },
 ];
+
+export const vikingGame: VikingGame = {
+  title: "Vikings",
+  description: "A game about vikings",
+  longDescription: [
+    "A game about vikings, where you can play as a viking and fight other vikings. You can also build your own viking village and explore the world.",
+    "In this game set in a fairy tale world, players embark on a quest through mystical lands filled with enchanting forests and towering mountains. Players can explore the world, build their own viking.",
+  ],
+  image:
+    "https://animations-on-the-web-git-how-i-use-3066e1-emilkowalski-s-team.vercel.app/how-i-use-framer-motion/app-store-like-cards/game.webp",
+};

@@ -1,5 +1,6 @@
 "use client";
 
+import AppStoreCard from "@/animations/app-store-card";
 import BasisTransform from "@/animations/basic-transform";
 import CopyButton from "@/animations/copy-button";
 import DragBall from "@/animations/drag-ball";
@@ -9,6 +10,7 @@ import MultiStateButton from "@/animations/multi-state-button";
 import SharedLayoutAnimation from "@/animations/shared-layout-animation";
 import AnimatedTabsComponent from "@/animations/shared-layout-tab-animations";
 import Task1 from "@/animations/task-1";
+import UseTransform from "@/animations/use-transform";
 import PageWrap from "@/components/page-wrap";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
@@ -23,7 +25,9 @@ type AnimateDemos =
   | "copy-button"
   | "multi-state-button"
   | "dynamic-height"
-  | "drag-ball";
+  | "drag-ball"
+  | "use-transform"
+  | "appstore-card";
 
 const animationOptions: {
   value: AnimateDemos;
@@ -65,6 +69,14 @@ const animationOptions: {
     value: "drag-ball",
     title: "Animate Drag - Drag Ball",
   },
+  {
+    value: "use-transform",
+    title: "Animate with - Use Transform",
+  },
+  {
+    value: "appstore-card",
+    title: "Shared Layout Animation - App Store Card",
+  },
 ];
 
 export default function Home() {
@@ -91,6 +103,10 @@ export default function Home() {
         return <DynamicHeight />;
       case "drag-ball":
         return <DragBall />;
+      case "use-transform":
+        return <UseTransform />;
+      case "appstore-card":
+        return <AppStoreCard />;
     }
   };
 

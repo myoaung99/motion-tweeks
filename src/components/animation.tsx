@@ -24,7 +24,7 @@ export const AnimationButton = ({
     <Button
       data-slot="AnimationButton"
       size={"lg"}
-      className={cn("p-4", className)}
+      className={cn("p-4 mb-8", className)}
       {...props}
     />
   );
@@ -38,7 +38,7 @@ export const AnimationContent = ({
   return (
     <div
       data-slot="AnimationContent"
-      className={cn("mt-12", className)}
+      className={cn("", className)}
       {...props}
     />
   );
