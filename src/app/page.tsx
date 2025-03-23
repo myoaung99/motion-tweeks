@@ -2,6 +2,7 @@
 
 import BasisTransform from "@/animations/basic-transform";
 import CopyButton from "@/animations/copy-button";
+import DragBall from "@/animations/drag-ball";
 import DynamicHeight from "@/animations/dynamic-height";
 import LayoutAnimate from "@/animations/layout-animate";
 import MultiStateButton from "@/animations/multi-state-button";
@@ -21,7 +22,8 @@ type AnimateDemos =
   | "shared-layout-animation-tabs"
   | "copy-button"
   | "multi-state-button"
-  | "dynamic-height";
+  | "dynamic-height"
+  | "drag-ball";
 
 const animationOptions: {
   value: AnimateDemos;
@@ -59,6 +61,10 @@ const animationOptions: {
     value: "dynamic-height",
     title: "Animate Dynamic Height",
   },
+  {
+    value: "drag-ball",
+    title: "Animate Drag - Drag Ball",
+  },
 ];
 
 export default function Home() {
@@ -83,6 +89,8 @@ export default function Home() {
         return <MultiStateButton />;
       case "dynamic-height":
         return <DynamicHeight />;
+      case "drag-ball":
+        return <DragBall />;
     }
   };
 
