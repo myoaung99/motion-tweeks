@@ -9,7 +9,10 @@ export const Animation = ({
   return (
     <section
       data-slot="Animation"
-      className={cn("p-4", className)}
+      className={cn(
+        "w-full min-w-[300px] items-center justify-center p-6 bg-black rounded-2xl",
+        className
+      )}
       {...props}
     />
   );
@@ -24,6 +27,7 @@ export const AnimationButton = ({
     <Button
       data-slot="AnimationButton"
       size={"lg"}
+      variant={"outline"}
       className={cn("p-4 mb-8", className)}
       {...props}
     />
@@ -53,10 +57,10 @@ export const AnimationDescription = ({
   return (
     <article
       data-slot="AnimationDescription"
-      className={cn("font-mono text-lg mt-12 max-w-3xl", className)}
+      className={cn("font-mono text-lg mt-12 max-w-3xl text-white", className)}
       {...props}
     >
-      <p className="mb-2 font-bold">Description: </p>
+      <p className="mb-2 font-bold text-white">Description: </p>
       {children}
     </article>
   );

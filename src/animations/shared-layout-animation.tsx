@@ -35,7 +35,7 @@ const SharedLayoutAnimation = () => {
                   className="bg-white max-w-[550px] p-3 rounded-2xl"
                 >
                   <div className="mb-3 flex justify-between">
-                    <div className="flex gap-4 items-center justify-between ">
+                    <div className="flex gap-4 items-center justify-between">
                       <motion.span layoutId={`${activeGame.title}-image`}>
                         <Image
                           src={activeGame.image}
@@ -58,7 +58,7 @@ const SharedLayoutAnimation = () => {
                         </motion.span>
                       </div>
                     </div>
-                    <motion.div
+                    <motion.span
                       layout="preserve-aspect"
                       layoutId={`${activeGame.title}-get`}
                     >
@@ -68,7 +68,7 @@ const SharedLayoutAnimation = () => {
                       >
                         Get
                       </Button>
-                    </motion.div>
+                    </motion.span>
                   </div>
                   <motion.p
                     initial={{ opacity: 0 }}
@@ -95,7 +95,7 @@ const SharedLayoutAnimation = () => {
                 className="bg-white rounded-xl p-2 flex justify-between items-center pe-6 hover:bg-zinc-100 cursor-pointer"
                 onClick={() => handleActiveGame(game)}
               >
-                <div className="flex gap-4 ">
+                <div className="flex gap-4">
                   <motion.span layoutId={`${game.title}-image`}>
                     <Image
                       src={game.image}
@@ -118,7 +118,7 @@ const SharedLayoutAnimation = () => {
                     </motion.span>
                   </div>
                 </div>
-                <motion.div
+                <motion.span
                   layout="preserve-aspect"
                   layoutId={`${game.title}-get`}
                 >
@@ -128,7 +128,7 @@ const SharedLayoutAnimation = () => {
                   >
                     Get
                   </Button>
-                </motion.div>
+                </motion.span>
               </motion.div>
             );
           })}

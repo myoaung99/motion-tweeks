@@ -3,6 +3,7 @@
 import AppStoreCard from "@/animations/app-store-card";
 import BasisTransform from "@/animations/basic-transform";
 import CopyButton from "@/animations/copy-button";
+import Counting from "@/animations/counting";
 import DragBall from "@/animations/drag-ball";
 import DynamicHeight from "@/animations/dynamic-height";
 import LayoutAnimate from "@/animations/layout-animate";
@@ -27,7 +28,8 @@ type AnimateDemos =
   | "dynamic-height"
   | "drag-ball"
   | "use-transform"
-  | "appstore-card";
+  | "appstore-card"
+  | "counting";
 
 const animationOptions: {
   value: AnimateDemos;
@@ -77,6 +79,10 @@ const animationOptions: {
     value: "appstore-card",
     title: "Shared Layout Animation - App Store Card",
   },
+  {
+    value: "counting",
+    title: "Counting",
+  },
 ];
 
 export default function Home() {
@@ -107,6 +113,8 @@ export default function Home() {
         return <UseTransform />;
       case "appstore-card":
         return <AppStoreCard />;
+      case "counting":
+        return <Counting />;
     }
   };
 
